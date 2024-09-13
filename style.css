@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    padding: 2rem;
+    flex-direction: row;
+}
+
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container__informacoes {
+    flex: 1;
+    padding: 2rem;
+}
+
+.container__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+}
+
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 1.5rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__botoes {
+    display: flex;
+    gap: 2em;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+    padding-bottom: 3rem;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto__paragrafo {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+/* Para telas grandes (desktop acima de 1440px) */
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 70%;
+        height: 80%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .container__botao {
+        font-size: 22px;
+    }
+
+    .texto__paragrafo {
+        font-size: 28px;
+    }
+}
+
+/* Para notebooks (entre 1024px e 1439px) */
+@media screen and (max-width: 1439px) {
+    .container {
+        width: 85%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .container__botao {
+        font-size: 20px;
+    }
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    .container__informacoes {
+        padding: 1.5rem;
+    }
+
+    .container__input {
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+/* Para tablets (entre 768px e 1023px) */
+@media screen and (max-width: 1023px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .container__botao {
+        font-size: 18px;
+        padding: 12px 18px;
+    }
+
+    .texto__paragrafo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container__input {
+        height: 54px;
+        font-size: 18px;
+    }
+}
+
+/* Para celulares (menos de 768px) */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .container__botao {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    .texto__paragrafo {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .container__input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .container__informacoes {
+        padding: 1rem;
+    }
+}
